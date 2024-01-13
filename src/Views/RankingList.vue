@@ -21,8 +21,6 @@ export default {
         const res = await response.json();
 
         if (res.error === undefined) {
-          console.log(res);
-          console.log(res[0]);
           this.players = res;
         } else {
           console.error(res.error.message);

@@ -73,7 +73,6 @@ export default {
         const res = await response.json();
 
         if (res.error === undefined) {
-          console.log(res);
           this.selectPlayerStats = res;
         } else {
           console.error(res.error.message);
@@ -88,7 +87,6 @@ export default {
         const res = await response.json();
 
         if (res.error === undefined) {
-          console.log(res);
           this.selectPlayer = res;
         } else {
           console.error(res.error.message);
@@ -112,9 +110,7 @@ export default {
       }
     },
     async selectResult(result) {
-      console.log("Selected user:");
       await this.getPlayerInfo(result.player_ID);
-      console.log("Selected STATS:");
       await this.getStats(result.player_ID);
     },
     

@@ -77,7 +77,6 @@ export default {
           this.$root.currentAttacks[this.$root.currentIndex].attack_ID
         );
         if (response.ok) {
-          console.log("Attack Bought!");
           this.successMessage = "Attack Bought!";
           this.getAttacks();
           this.clearSuccessMessage();

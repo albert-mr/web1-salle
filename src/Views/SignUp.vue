@@ -22,7 +22,6 @@ export default {
       }).then((response) => {
         if (response.ok) {
           this.response = "Player created!";
-          console.log("Player created!");
           this.handleSignUp();
           return response;
         }

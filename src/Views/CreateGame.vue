@@ -34,7 +34,6 @@ export default {
       try {
         const response = await Api.createGame(this.$root.currentPlayer.token, this.game_ID, Number(this.size), Number(this.HP_max));
         if (response.ok) {
-          console.log("Game created!");
           this.$router.push('/grid');
         } else {
           const res = await response.json();

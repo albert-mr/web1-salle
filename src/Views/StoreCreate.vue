@@ -35,7 +35,6 @@ export default {
       try {
         const response = await Api.createAttack(this.$root.currentPlayer.token, this.attack_id, this.positions, this.img);
         if (response.ok) {
-          console.log("Attack created!");
           this.successMessage = "Attack created!";
           this.clearSuccessMessage();
         } else {

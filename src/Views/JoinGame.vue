@@ -24,11 +24,7 @@ export default {
 
         if (res.error === undefined) {
           this.games = await res.filter(game => !game.finished);
-          
-          console.log(this.games);
-          console.log(this.$root.currentGame);
           if (this.$root.currentGame != null) {
-            console.log("Current Game:", this.$root.currentGame);
             this.currentGameTitle = `Current Game: ${this.$root.currentGame[0].game_ID}`;
           } else {
             this.currentGameTitle = "No Current Game";
@@ -43,12 +39,9 @@ export default {
 
 
     async joinThisGame(game) {
-      console.log("Clicked on Game ID:", game.game_ID);
       try {
         const response = await Api.joinGame(this.$root.currentPlayer.token, game.game_ID);
         if (response.ok) {
-          console.log("Joined game!");
-          
           this.$router.push('/grid');
          
         } else {
@@ -63,11 +56,9 @@ export default {
     },
 
     async leaveThisGame(gameId) {
-      console.log("Clicked on Game ID:", gameId);
       try {
         const response = await Api.leaveGame(this.$root.currentPlayer.token, gameId);
         if (response.ok) {
-          console.log("Left game!");
           
         } else {
           const res = await response.json();

@@ -49,9 +49,6 @@ export default {
       .then((response) => response.json())
                 .then  ( async (res) => {
                     if (res.error == undefined) {
-                        
-                       console.log(res);
-                      
                     } else {
                         this.response = res.error.message;
                     }

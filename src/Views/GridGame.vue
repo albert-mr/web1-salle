@@ -133,7 +133,6 @@ export default {
         const response = await Api.move(this.$root.currentPlayer.token, message, attackId);
         const res = await response.json();
         if (res.error === undefined) {
-          console.log(res);
           this.$root.currentGames = res;
           this.handleGames();
         } else {

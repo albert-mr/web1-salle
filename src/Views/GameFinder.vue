@@ -24,8 +24,6 @@ export default {
       .then((response) => response.json())
                 .then((res) => {
                     if (res.error == undefined) {
-                        
-                        console.log(res);
                         this.$root.currentGames = res;
                         this.handleGames()
 

@@ -93,7 +93,6 @@ export default {
       }, 2000);
     },
     async sellIt(attackIdentifier, price) {
-      console.log(attackIdentifier + ": " + price);
       try {
         const response = await Api.sellAttack(this.$root.currentPlayer.token, attackIdentifier, price);
         if (response.ok) {
@@ -111,7 +110,6 @@ export default {
       }
     },
     async equipIt(attackIdentifier) {
-      console.log(attackIdentifier);
       try {
         const response = await Api.equip(this.$root.currentPlayer.token, attackIdentifier);
         if (response.ok) {
@@ -129,7 +127,6 @@ export default {
       }
     },
     async unequipIt(attackIdentifier) {
-      console.log(attackIdentifier);
       try {
         const response = await Api.unEquip(this.$root.currentPlayer.token, attackIdentifier);
         if (response.ok) {

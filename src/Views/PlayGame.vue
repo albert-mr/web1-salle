@@ -21,11 +21,8 @@ export default {
       try {
         const response = await Api.getCurrentPlayerGames(this.$root.currentPlayer.token);
         const res = await response.json();
-        console.log("Current Game ->");
-           console.log(res[0]);
         if (res.error === undefined) {
           if(res.length === 1){
-            console.log("YES");
             this.$root.currentGame = res;
           }else{
             this.$root.currentGame = null;

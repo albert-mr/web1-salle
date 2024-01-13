@@ -36,7 +36,6 @@ export default {
         .then((res) => {
           if (res.error == undefined) {
             this.response = "Token: " + res.token;
-            console.log(this.response);
             this.$root.currentPlayer = res;
             this.handleSignUp();
           } else {
